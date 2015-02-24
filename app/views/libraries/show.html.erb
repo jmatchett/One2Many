@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+	This great library...
+  <strong><%= @library.name %></strong>
+  has these books
+</p>
+
+<p>
+	<ul>
+		<% @library.books.each do |book| %>
+			<li><%= book.title %></li>
+			<% end %>
+		</ul>
+	</ul>
+</p>
+
+<%= link_to 'Edit', edit_library_path(@library) %> |
+<%= link_to 'Back', libraries_path %>
